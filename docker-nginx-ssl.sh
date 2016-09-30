@@ -1,0 +1,1 @@
+docker run -d --name nginx-proxy -v /var/run/docker.sock:/tmp/docker.sock:ro -e LETSENCRYPT_EMAIL=oussama_md@hotmail.com -v /data/certs:/etc/letsencrypt/live --restart=always eforce21/letsencrypt-nginx-proxy
