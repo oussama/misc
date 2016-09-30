@@ -1,1 +1,1 @@
-sudo docker run -d -v /data/rancher/mysql:/var/lib/mysql --restart=unless-stopped -p 18080:8080 rancher/server
+sudo docker run -e "VIRTUAL_HOST=rancher.zorend.com" -d -v /data/rancher/mysql:/var/lib/mysql --restart=unless-stopped --expose 8080 rancher/server
