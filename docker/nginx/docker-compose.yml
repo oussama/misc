@@ -1,0 +1,7 @@
+  image: nginx
+  volumes:
+   - /data/nginx/conf.d:/etc/nginx/conf.d
+   - /data/nginx/html:/usr/share/nginx/html
+  ports:
+   - "80:80"
+   - "433:433"
