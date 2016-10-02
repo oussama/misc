@@ -1,0 +1,10 @@
+
+simple-site:
+  image: nginx
+  container_name: simple-site
+  volumes:
+    - "../../../volumes/examples/simple-site/conf.d/:/etc/nginx/conf.d"
+  environment:
+    - VIRTUAL_HOST=site.example.com
+    - LETSENCRYPT_HOST=site.example.com
+    - LETSENCRYPT_EMAIL=email@example.com
