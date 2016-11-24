@@ -15,8 +15,6 @@ spec:
         backend:
           serviceName: svc1
           servicePort: 8080
-  - host: odis.zorend.com
-    http:
       - path: /s2
         backend:
           serviceName: svc2
