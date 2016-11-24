@@ -8,14 +8,14 @@ spec:
   tls:
     - secretName: traefik-cert
   rules:
-  - host: odis.zorend.com
+  - host:
     http:
       paths:
       - path: /
         backend:
           serviceName: svc1
           servicePort: 8080
-  - host:
+  - host: odis.zorend.com
     http:
       - path: /s2
         backend:
