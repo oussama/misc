@@ -11,6 +11,10 @@ spec:
   selector:
     matchLabels:
       k8s-app: traefik-ingress-lb
+  volumes:
+      - name: config
+        configMap:
+          name: traefik-conf
   template:
     metadata:
       labels:
@@ -37,7 +41,7 @@ spec:
           containerPort: 8080
         volumeMounts:
         - mountPath: "/config"
-          name: "traefik-conf"
+          name: "config"
         args:
         - --configfile=/config/traefik.toml
         - --web
