@@ -1,0 +1,25 @@
+imageTag: v1.1.0
+serviceType: LoadBalancer
+cpuRequest: 100m
+memoryRequest: 20Mi
+cpuLimit: 100m
+memoryLimit: 30Mi
+ssl:
+  enabled: true
+  enforced: true
+acme:
+  enabled: false
+  email: admin@example.com
+  staging: true
+  # Save ACME certs to a persistent volume. WARNING: If you do not do this, you will re-request
+  # certs every time a pod (re-)starts and you WILL be rate limited!
+  persistence:
+    enabled: true
+    storageClass: generic
+    accessMode: ReadWriteOnce
+    size: 1Gi
+dashboard:
+  enabled: true
+  domain: traefik.zorend.com
+gzip:
+  enabled: true
