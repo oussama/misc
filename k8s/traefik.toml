@@ -4,8 +4,8 @@
     [entryPoints.https.tls]
       # certs used as default certs
       [[entryPoints.https.tls.certificates]]
-      certFile = "tests/traefik.crt"
-      keyFile = "tests/traefik.key"
+      CertFile = "/ssl/tls.crt"
+      KeyFile = "/ssl/tls.key"
 [acme]
 email = "oussama_md@hotmail.com"
 storageFile = "acme.json"
