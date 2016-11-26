@@ -11,10 +11,6 @@ spec:
   selector:
     matchLabels:
       k8s-app: traefik-ingress-lb
-  volumes:
-      - name: config
-        configMap:
-          name: traefik-conf
   template:
     metadata:
       labels:
@@ -23,6 +19,10 @@ spec:
     spec:
       terminationGracePeriodSeconds: 60
       hostNetwork: true
+      volumes:
+      - name: config
+        configMap:
+          name: traefik-conf
       containers:
       - image: traefik
         name: traefik-ingress-lb
