@@ -5,5 +5,6 @@ kubectl apply configmap traefik-conf --from-file=traefik.toml --namespace=kube-s
 wget -N https://raw.githubusercontent.com/oussama/misc/master/k8s/traefik.yaml
 kubectl apply -f traefik.yaml
 kubectl describe deploy traefik-ingress-controller --namespace=kube-system
-kubectl describe svc traefik-ingress-controller --namespace=kube-system
+kubectl --namespace=kube-system get node
+kubectl describe node traefik-ingress-controller --namespace=kube-system
 kubectl describe po traefik-ingress-controller --namespace=kube-system
