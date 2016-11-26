@@ -27,7 +27,7 @@ spec:
         secret:
           secretName: traefik-cert
       containers:
-      - image: traefik
+      - image: containous/traefik:k8s
         name: traefik-ingress-lb
         resources:
           limits:
