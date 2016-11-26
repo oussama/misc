@@ -43,6 +43,8 @@ spec:
         - name: https
           containerPort: 443
           hostPort: 443
+        - name: admin
+          containerPort: 8081
         volumeMounts:
         - mountPath: "/ssl"
           name: "ssl"
@@ -50,5 +52,4 @@ spec:
           name: "config"
         args:
         - --configfile=/config/traefik.toml
-        - --web
         - --kubernetes
